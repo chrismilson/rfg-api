@@ -6,7 +6,8 @@
     "outDir": "./lib",
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declaration": true
   },
   "include": ["src"],
   "exclude": [
