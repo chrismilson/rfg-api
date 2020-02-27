@@ -25,3 +25,9 @@ export function createRequest() {
 export function injectFaviconMarkups() {
 
 }
+
+export default {
+  generateFavicon,
+  createRequest,
+  injectFaviconMarkups
+}
