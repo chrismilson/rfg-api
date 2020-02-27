@@ -72,5 +72,5 @@ export default interface Settings {
    *   post-process the favicon package, you should explicitely set this
    *   parameter to false.
    */
-  use_path_as_is: boolean
+  use_path_as_is?: boolean
 }
