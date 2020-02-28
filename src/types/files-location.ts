@@ -7,7 +7,7 @@ interface RootFilesLocation {
 }
 
 interface PathFilesLocation {
-  /** 
+  /**
    * The favicon files are expected to be placed in a specific directory of the
    * web site.
    */

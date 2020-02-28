@@ -1,4 +1,4 @@
-/** 
+/**
  * Your API key. Get a key
  * [here](https://realfavicongenerator.net/api#register_key).
  */

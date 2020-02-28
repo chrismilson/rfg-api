@@ -3,8 +3,8 @@ interface BaseSafariPinnedTabFaviconDesign {
   theme_color: string
 }
 
-interface NoChangeSafariPinnedTabFaviconDesign 
-extends BaseSafariPinnedTabFaviconDesign {
+interface NoChangeSafariPinnedTabFaviconDesign
+  extends BaseSafariPinnedTabFaviconDesign {
   /**
    * Use the master picture as is. Since this image must be in SVG format, the
    * master picture must also be an SVG if this option is chosen.
@@ -13,10 +13,10 @@ extends BaseSafariPinnedTabFaviconDesign {
 }
 
 interface SilhouetteSafariPinnedTabFaviconDesign
-extends BaseSafariPinnedTabFaviconDesign {
+  extends BaseSafariPinnedTabFaviconDesign {
   /**
    * Turn the master picture as a silhouette: transparent regions remain
-   * transparent and the opaque regions become black. 
+   * transparent and the opaque regions become black.
    *
    * Since the master picture is often a PNG, it is converted to SVG.
    */
@@ -24,7 +24,7 @@ extends BaseSafariPinnedTabFaviconDesign {
 }
 
 interface BlackAndWhiteSafariPinnedTabFaviconDesign
-extends BaseSafariPinnedTabFaviconDesign {
+  extends BaseSafariPinnedTabFaviconDesign {
   /**
    * Turn the master picture into a black-and-white pictures. Use the threshold
    * option to indicate how colors should be turned to black or white.
@@ -45,8 +45,8 @@ extends BaseSafariPinnedTabFaviconDesign {
  * black.
  */
 type SafariPinnedTabFaviconDesign =
-  NoChangeSafariPinnedTabFaviconDesign |
-  SilhouetteSafariPinnedTabFaviconDesign |
-  BlackAndWhiteSafariPinnedTabFaviconDesign
+  | NoChangeSafariPinnedTabFaviconDesign
+  | SilhouetteSafariPinnedTabFaviconDesign
+  | BlackAndWhiteSafariPinnedTabFaviconDesign
 
 export default SafariPinnedTabFaviconDesign

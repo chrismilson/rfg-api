@@ -5,7 +5,7 @@ export default interface FaviconResult {
   files_urls: string[]
   /** Html code to incude in your document. */
   html_code: string
-  compression: boolean,
+  compression: boolean
   /** This is a list of markups that the html code will influence. */
   overlapping_markups: string[]
 }

@@ -5,7 +5,7 @@ export interface BaseIOSFaviconDesign {
    *
    * Use background_and_margin to declare a background color. If none is
    * specified, the background_and_margin of the iOS Touch icon will be used.
-   * 
+   *
    * Warning: if no background color was defined at all, the API will generate a
    * startup image with transparent margins. iOS prevents this and will fill the
    * transparent regions with black.
@@ -22,8 +22,8 @@ export interface BaseIOSFaviconDesign {
   /**
    * One icon is enough to support all iOS devices. However, it is sometimes
    * useful to have more than one. Whatever the chosen options, at least one
-   * icon is created and declared in the HTML. 
-   * 
+   * icon is created and declared in the HTML.
+   *
    * If you don't want iOS support at all, just discard the whole ios section.
    */
   assets?: {
@@ -33,14 +33,13 @@ export interface BaseIOSFaviconDesign {
     ios7_and_later_icons?: boolean
     /** Generate precomposed icons, in addition to regular icons. */
     precomposed_icons?: boolean
-    /** 
+    /**
      * If true, only the default icon are declared in the HTML. Else, all
-     * regular (ie. non-precompued) icons are declared. 
+     * regular (ie. non-precompued) icons are declared.
      */
     declare_only_default_icon?: boolean
   }
 }
-
 
 export interface NoChangeIOSFaviconDesign extends BaseIOSFaviconDesign {
   /**
@@ -49,9 +48,10 @@ export interface NoChangeIOSFaviconDesign extends BaseIOSFaviconDesign {
   picture_aspect: 'no_change'
 }
 
-export interface BackgroundAndMarginIOSFaviconDesign extends BaseIOSFaviconDesign {
+export interface BackgroundAndMarginIOSFaviconDesign
+  extends BaseIOSFaviconDesign {
   /**
-   * Apply a background and a margin to the master picture. 
+   * Apply a background and a margin to the master picture.
    * When using this value, also specify margin and background_color.
    */
   picture_aspect: 'background_and_margin'
@@ -69,7 +69,7 @@ export interface BackgroundAndMarginIOSFaviconDesign extends BaseIOSFaviconDesig
 }
 
 type IOSFaviconDesign =
-  NoChangeIOSFaviconDesign |
-  BackgroundAndMarginIOSFaviconDesign
+  | NoChangeIOSFaviconDesign
+  | BackgroundAndMarginIOSFaviconDesign
 
 export default IOSFaviconDesign

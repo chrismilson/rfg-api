@@ -24,11 +24,11 @@ export interface FaviconGenerationResult {
 }
 
 export interface ManifestRequestOptions {
-  apiKey: APIKey,
+  apiKey: APIKey
   masterPicture: MasterPicture | PathMasterPicture
   /** Optionally set the path  */
-  output?: string,
-  designs: FaviconDesigns,
-  settings?: Settings,
+  output?: string
+  designs: FaviconDesigns
+  settings?: Settings
   versioning?: Versioning
 }

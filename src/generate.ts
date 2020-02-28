@@ -1,16 +1,13 @@
 import axios from 'axios'
 import unzipper from 'unzipper'
-import {
-  FaviconGenerationManifest,
-  FaviconGenerationResult
-} from './types'
+import { FaviconGenerationManifest, FaviconGenerationResult } from './types'
 
 /**
  * When supplied with a valid request object, will use the REST API to generate
  * the desired icons and write them to a destination folder.
- * 
+ *
  * @param request The favicon generation manifest
- * @param dest 
+ * @param dest
  */
 export default async function generateFavicon(
   request: FaviconGenerationManifest,
@@ -21,16 +18,22 @@ export default async function generateFavicon(
   // download a zip of the assets from.
   const { data } = await axios.post(
     'https://realfavicongenerator.net/api/favicon',
-    { favicon_generation: request }
+    {
+      // The format of the config is specified by the rest api.
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      favicon_generation: request
+    }
   )
-  
+
   // assume success
   const { package_url: zipURL } = data.favicon_generation_result.favicon
 
   // download the package and extract it to the destination
-  await axios.get(zipURL, {
-    responseType: 'stream'
-  }).then(res => res.data.pipe(unzipper.Extract({ path: dest })))
+  await axios
+    .get(zipURL, {
+      responseType: 'stream'
+    })
+    .then(res => res.data.pipe(unzipper.Extract({ path: dest })))
 
   return data.favicon_generation_result
 }

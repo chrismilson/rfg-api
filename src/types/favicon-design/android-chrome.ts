@@ -37,7 +37,7 @@ interface BaseAndroidChromeFaviconDesign {
     orientation?: 'portrait' | 'landscape'
     /**
      * The color applied to the standalone app when using the task switcher.
-     * 
+     *
      * Introduced in Android 5 Lollipop.
      */
     theme_color: string
@@ -77,13 +77,13 @@ interface BaseAndroidChromeFaviconDesign {
 }
 
 interface NoChangeAndroidChromeFaviconDesign
-extends BaseAndroidChromeFaviconDesign {
+  extends BaseAndroidChromeFaviconDesign {
   /** Use the master picture as is. */
   picture_aspect: 'no_change'
 }
 
 interface BackgroundAndMarginAndroidChromeFaviconDesign
-extends BaseAndroidChromeFaviconDesign {
+  extends BaseAndroidChromeFaviconDesign {
   /** Generate a square icon with margin and background. */
   picture_aspect: 'background_and_margin'
   margin: number | string
@@ -91,8 +91,8 @@ extends BaseAndroidChromeFaviconDesign {
 }
 
 interface ShadowAndroidChromeFaviconDesign
-extends BaseAndroidChromeFaviconDesign {
-  /** 
+  extends BaseAndroidChromeFaviconDesign {
+  /**
    * Add a small drop shadow to the master picture. This effect is used by
    * several Google apps, such as Chrome, Gmail, Drive or Inbox.
    */
@@ -105,8 +105,8 @@ extends BaseAndroidChromeFaviconDesign {
  * present.
  */
 type AndroidChromeFaviconDesign =
-  NoChangeAndroidChromeFaviconDesign |
-  BackgroundAndMarginAndroidChromeFaviconDesign |
-  ShadowAndroidChromeFaviconDesign
+  | NoChangeAndroidChromeFaviconDesign
+  | BackgroundAndMarginAndroidChromeFaviconDesign
+  | ShadowAndroidChromeFaviconDesign
 
 export default AndroidChromeFaviconDesign

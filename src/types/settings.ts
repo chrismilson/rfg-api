@@ -6,12 +6,12 @@ export default interface Settings {
   compression: number
   /** Set the scaling algorithm. */
   scaling_algorithm:
-    'Mitchell' |
-    'NearestNeighbor' |
-    'Cubic' |
-    'Bilinear' |
-    'Lanczos' | 
-    'Spline'
+    | 'Mitchell'
+    | 'NearestNeighbor'
+    | 'Cubic'
+    | 'Bilinear'
+    | 'Lanczos'
+    | 'Spline'
   /**
    * When the master picture is too small for a particular, requested platform,
    * nothing is generated for that platform. For example, if the request

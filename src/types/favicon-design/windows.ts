@@ -42,14 +42,13 @@ interface NoChangeWindowsFaviconDesign extends BaseWindowsFaviconDesign {
   picture_aspect: 'no_change'
 }
 
-interface WhiteSilhouetteWindowsFaviconDesign
-extends BaseWindowsFaviconDesign {
+interface WhiteSilhouetteWindowsFaviconDesign extends BaseWindowsFaviconDesign {
   /** Turn the master picture into a white silhouette. */
   picture_aspect: 'white_silhouette'
 }
 
 type WindowsFaviconDesign =
-  NoChangeWindowsFaviconDesign |
-  WhiteSilhouetteWindowsFaviconDesign
+  | NoChangeWindowsFaviconDesign
+  | WhiteSilhouetteWindowsFaviconDesign
 
 export default WindowsFaviconDesign

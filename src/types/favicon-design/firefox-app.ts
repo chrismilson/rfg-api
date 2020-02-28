@@ -6,7 +6,7 @@ interface BaseFirefoxAppFaviconDesign {
     app_description: string
     /** The developer name. */
     developer_name: string
-    /** 
+    /**
      * If there is an existing manifest file, RealFaviconGenerator can update it
      * instead of creating a new one. If so, pass it with the existing_manifest
      * attribute. Make sure to value this attribute with an encoded version of
@@ -26,13 +26,13 @@ interface BaseFirefoxAppFaviconDesign {
 
 interface NoChangeFirefoxAppFaviconDesign extends BaseFirefoxAppFaviconDesign {
   /** Use the master picture as is. */
-  picture_aspect: 'no_change'  
+  picture_aspect: 'no_change'
 }
 
 interface BackgroundColorAndMargin {
   /** Circle background color. */
   background_color: string
-  /** 
+  /**
    * Margin to apply to the master picture. Given in pixels for a 60x60 icon,
    * or a percentage.
    */
@@ -40,8 +40,9 @@ interface BackgroundColorAndMargin {
 }
 
 interface CircleFirefoxAppFaviconDesign
-extends BaseFirefoxAppFaviconDesign, BackgroundColorAndMargin {
-  /** 
+  extends BaseFirefoxAppFaviconDesign,
+    BackgroundColorAndMargin {
+  /**
    * Generate a circular icon. This is the primary icon format used in Firefox
    * OS.
    */
@@ -61,12 +62,14 @@ extends BaseFirefoxAppFaviconDesign, BackgroundColorAndMargin {
 }
 
 interface RoundedSquareFirefoxAppFaviconDesign
-extends BaseFirefoxAppFaviconDesign, BackgroundColorAndMargin {
+  extends BaseFirefoxAppFaviconDesign,
+    BackgroundColorAndMargin {
   picture_aspect: 'rounded_square'
 }
 
 interface SquareFirefoxAppFaviconDesign
-extends BaseFirefoxAppFaviconDesign, BackgroundColorAndMargin {
+  extends BaseFirefoxAppFaviconDesign,
+    BackgroundColorAndMargin {
   picture_aspect: 'square'
 }
 
@@ -76,9 +79,9 @@ extends BaseFirefoxAppFaviconDesign, BackgroundColorAndMargin {
  * corresponding manifest field is filled with "TODO".
  */
 type FirefoxAppFaviconDesign =
-  NoChangeFirefoxAppFaviconDesign |
-  CircleFirefoxAppFaviconDesign |
-  RoundedSquareFirefoxAppFaviconDesign |
-  SquareFirefoxAppFaviconDesign
+  | NoChangeFirefoxAppFaviconDesign
+  | CircleFirefoxAppFaviconDesign
+  | RoundedSquareFirefoxAppFaviconDesign
+  | SquareFirefoxAppFaviconDesign
 
 export default FirefoxAppFaviconDesign
