@@ -1,7 +1,2 @@
-import generateFavicon from './generate'
-import createRequest from './request'
-
-export default {
-  generateFavicon,
-  createRequest
-}
+export { default as generateFavicon } from './generate'
+export { default as createRequest } from './request'
