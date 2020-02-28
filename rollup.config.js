@@ -5,10 +5,7 @@ const tsconfigDefaults = {
     declaration: true,
     allowSyntheticDefaultImports: true
   },
-  exclude: [
-    'node_modules',
-    '**/__tests__/*'
-  ]
+  exclude: ['node_modules', '**/__tests__/*']
 }
 
 export default {
