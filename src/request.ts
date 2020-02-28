@@ -4,6 +4,13 @@ import {
   ManifestRequestOptions
 } from './types'
 
+/**
+ * Creates a favicon geneation manifest that is in the correct format for the
+ * rest api. The rest api has some quirks, so this method should help the end
+ * user build a valid config for generating a favicon.
+ * 
+ * @param options
+ */
 export default function createRequest(
   options: ManifestRequestOptions
 ): FaviconGenerationManifest {
