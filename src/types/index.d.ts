@@ -1,6 +1,7 @@
 import FaviconDesigns from './favicon-design'
 import MasterPicture from './master-picture'
 import FilesLocation from './files-location'
+import FaviconResult from './favicon-result'
 import Settings from './settings'
 
 export interface FaviconGenerationManifest {
@@ -26,4 +27,12 @@ export interface FaviconGenerationManifest {
    * and the value is a hashed timestamp.
    */
   versioning?: boolean
+}
+
+export interface FaviconGenerationResult {
+  result: { status: string }
+  favicon: FaviconResult
+  files_location: FilesLocation
+  preview_picture_url: string
+  version: string
 }
