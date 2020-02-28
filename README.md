@@ -13,6 +13,14 @@ is in typescript for added development pleasure.
 
 ## Install
 
+### yarn
+
+```bash
+yarn add rfg-api
+```
+
+### npm
+
 ```bash
 npm install rfg-api --save
 ```
