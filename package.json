@@ -1,5 +1,5 @@
 {
-  "name": "rfg-api",
+  "name": "@shlappas/rfg-api",
   "description": "RealFaviconGenerator Node API",
   "version": "0.6.0",
   "main": "lib/index.js",
