@@ -16,11 +16,13 @@
   },
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "metaparser": "^1.0.7"
+    "path": "^0.12.7",
+    "unzipper": "^0.10.9"
   },
   "keywords": [
     "node",
@@ -30,6 +32,7 @@
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",
     "@types/jest": "^25.1.3",
+    "@types/unzipper": "^0.10.2",
     "jest": "^25.1.0",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.2"
