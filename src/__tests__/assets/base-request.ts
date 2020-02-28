@@ -12,8 +12,8 @@ import { FaviconGenerationManifest } from '../../types'
 const request: FaviconGenerationManifest = {
   api_key: 'f26d432783a1856427f32ed8793e1d457cc120f1',
   master_picture: {
-    type: 'inline',
-    content: 'iVBORw0KGgoAAAANSUhEUgAABFMAAARTCAIAAAAoRvvGAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH3AwNFwoMdIJSfAAAIABJREFUeNrsnXecHVXd'
+    type: 'url',
+    url: new URL('https://shlappas.com/icon/192.png')
   },
   favicon_design: {
     ios: {
