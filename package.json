@@ -1,7 +1,7 @@
 {
   "name": "rfg-api",
   "description": "RealFaviconGenerator Node API",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "main": "lib/index.js",
   "files": [
     "lib/**/*"
@@ -9,7 +9,11 @@
   "scripts": {
     "lint": "eslint src/**/* --ext .js,.jsx,.ts,.tsx",
     "build": "rollup -c",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "yarn build",
+    "preversion": "yarn lint",
+    "version": "yarn lint --fix && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
