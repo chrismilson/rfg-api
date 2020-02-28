@@ -8,6 +8,9 @@ API](https://realfavicongenerator.net/api/non_interactive_api)) for
 This API lets you create favicons for all platforms: desktop browsers, iOS,
 Android, etc.
 
+This rewrite attempts to clean up the original with some more documentation, and
+is in typescript for added development pleasure.
+
 ## Install
 
 ```bash
