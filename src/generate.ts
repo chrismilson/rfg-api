@@ -1,7 +1,5 @@
 import axios from 'axios'
 import unzipper from 'unzipper'
-import fs from 'fs'
-import path from 'path'
 import {
   FaviconGenerationManifest,
   FaviconGenerationResult
