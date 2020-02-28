@@ -17,5 +17,6 @@ export default {
     dir: 'lib',
     format: 'cjs'
   },
-  plugins: [typescript({ tsconfigDefaults })]
+  plugins: [typescript({ tsconfigDefaults })],
+  external: ['axios', 'unzipper', 'fs']
 }
