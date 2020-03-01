@@ -9,9 +9,16 @@ import { FaviconGenerationManifest, FaviconGenerationResult } from './types'
  * @param request The favicon generation manifest
  * @param dest
  */
-export default async function generateFavicon(
+export function generateFavicon(
   request: FaviconGenerationManifest,
   dest: string
+)
+export function generateFavicon(
+  request: FaviconGenerationManifest & { output: string }
+)
+export default async function generateFavicon(
+  request: FaviconGenerationManifest & { output?: string },
+  dest?: string
 ): Promise<FaviconGenerationResult> {
   // send a post request to the rest api to generate the favicon.
   // The response should give us the status of our request, and a URL to
@@ -29,11 +36,9 @@ export default async function generateFavicon(
   const { package_url: zipURL } = data.favicon_generation_result.favicon
 
   // download the package and extract it to the destination
-  await axios
-    .get(zipURL, {
-      responseType: 'stream'
-    })
-    .then(res => res.data.pipe(unzipper.Extract({ path: dest })))
+  await axios.get(zipURL, { responseType: 'stream' }).then(res => {
+    res.data.pipe(unzipper.Extract({ path: dest || request.output }))
+  })
 
   return data.favicon_generation_result
 }
