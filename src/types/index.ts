@@ -25,7 +25,7 @@ export interface FaviconGenerationResult {
 
 export interface ManifestRequestOptions {
   apiKey: APIKey
-  masterPicture: MasterPicture | PathMasterPicture
+  masterPicture: string
   /** Optionally set the path  */
   output?: string
   designs: FaviconDesigns

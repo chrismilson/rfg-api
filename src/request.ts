@@ -1,17 +1,24 @@
 import fs from 'fs'
+import path from 'path'
 import { FaviconGenerationManifest, ManifestRequestOptions } from './types'
 
 function normaliseMasterPicture(
   options: ManifestRequestOptions['masterPicture']
 ): FaviconGenerationManifest['master_picture'] {
-  if (options.type === 'path') {
+  try {
+    const url = new URL(options)
+    return { type: 'url', url }
+  } catch (e) {
+    // if it is not a valid url it will throw.
+    // now we should check if it is a valid path.
+    const p = path.resolve(process.cwd(), options)
     return {
       type: 'inline',
-      content: fs.readFileSync(options.path).toString('base64')
+      content: fs.existsSync(p)
+        ? fs.readFileSync(p).toString('base64')
+        : options // interpret the base value as inline.
     }
   }
-
-  return options
 }
 
 function normaliseFilesLocation(
