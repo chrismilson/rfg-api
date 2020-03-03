@@ -30,11 +30,12 @@
     "fstream": "^1.0.2",
     "metaparser": "^1.0.7",
     "mkdirp": "^0.5.0",
-    "node-unzip-2": "^0.2.7"
+    "unzipper": "^0.10.10"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/node": "^13.7.7",
+    "@types/unzipper": "^0.10.2",
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "@typescript-eslint/parser": "^2.22.0",
     "eslint": "^6.8.0",
