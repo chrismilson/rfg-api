@@ -128,7 +128,7 @@ export async function injectFaviconMarkups(
     return await new Promise((resolve, reject) => {
       metaparser({
         ...metaparserOptions,
-        callback: (err, html) => {
+        callback: (err: Error, html: string) => {
           if (err) reject(err)
           else resolve(html)
         }
