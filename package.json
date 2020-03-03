@@ -3,6 +3,9 @@
   "description": "RealFaviconGenerator API",
   "version": "0.5.0",
   "homepage": "https://github.com/RealFaviconGenerator/rfg-api",
+  "scripts": {
+    "test": "mocha"
+  },
   "author": {
     "name": "Philippe Bernard",
     "email": "philippe@realfavicongenerator.net"
@@ -15,12 +18,11 @@
     "url": "https://github.com/RealFaviconGenerator/rfg-api/issues"
   },
   "license": "MIT",
-  "engines": {
-    "node": ">= 0.8.0"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
+  "keywords": [
+    "node",
+    "favicon",
+    "realfavicongenerator"
+  ],
   "dependencies": {
     "axios": "^0.18.0",
     "fstream": "^1.0.2",
@@ -28,11 +30,6 @@
     "mkdirp": "^0.5.0",
     "node-unzip-2": "^0.2.7"
   },
-  "keywords": [
-    "node",
-    "favicon",
-    "realfavicongenerator"
-  ],
   "devDependencies": {
     "@types/node": "^13.7.7",
     "mocha": "^5.2.0",
