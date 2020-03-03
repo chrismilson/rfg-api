@@ -7,30 +7,30 @@ import Settings from './settings'
 import Versioning from './versioning'
 
 export interface FaviconGenerationRequest {
-    api_key: APIKey
-    master_picture: MasterPicture
-    files_location: FilesLocation
-    favicon_design: FaviconDesigns
-    settings?: Settings
-    versioning?: Versioning
+  api_key: APIKey
+  master_picture: MasterPicture
+  files_location: FilesLocation
+  favicon_design: FaviconDesigns
+  settings?: Settings
+  versioning?: Versioning
 }
 
 export interface FaviconGenerationResult {
-    result: {
-        status: string
-    }
-    favicon: FaviconResult
-    files_location: FilesLocation
-    preview_picture_url: string
-    version: string
+  result: {
+    status: string
+  }
+  favicon: FaviconResult
+  files_location: FilesLocation
+  preview_picture_url: string
+  version: string
 }
 
 export interface ManifestRequestOptions {
-    apiKey: APIKey
-    masterPicture: string
-    /** Optionally set the path  */
-    output?: string
-    designs: FaviconDesigns
-    settings?: Settings
-    versioning?: Versioning
+  apiKey: APIKey
+  masterPicture: string
+  /** Optionally set the path  */
+  output?: string
+  designs: FaviconDesigns
+  settings?: Settings
+  versioning?: Versioning
 }
