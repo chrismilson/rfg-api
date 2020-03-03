@@ -1,12 +1,6 @@
-import {
-  fileToBase64,
-  fileToBase64Sync
-} from './file-to-base-64'
+import { fileToBase64, fileToBase64Sync } from './file-to-base-64'
 
-export {
-  fileToBase64,
-  fileToBase64Sync
-}
+export { fileToBase64, fileToBase64Sync }
 
 export function init() {
   return {
