@@ -4,7 +4,8 @@
   "version": "0.5.0",
   "homepage": "https://github.com/RealFaviconGenerator/rfg-api",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "tsc"
   },
   "author": {
     "name": "Philippe Bernard",
