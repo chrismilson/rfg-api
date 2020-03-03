@@ -3,6 +3,7 @@
   "description": "RealFaviconGenerator API",
   "version": "0.5.0",
   "homepage": "https://github.com/RealFaviconGenerator/rfg-api",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha",
     "lint": "eslint src/**/* --ext .ts,.js",
