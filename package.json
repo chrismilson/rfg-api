@@ -5,6 +5,7 @@
   "homepage": "https://github.com/RealFaviconGenerator/rfg-api",
   "scripts": {
     "test": "mocha",
+    "lint": "eslint src/**/* --ext .ts,.js",
     "build": "tsc"
   },
   "author": {
