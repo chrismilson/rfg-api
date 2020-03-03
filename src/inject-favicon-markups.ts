@@ -1,4 +1,5 @@
-import metaparser from 'metaparser'
+import * as metaParser_ from 'metaparser'
+const metaParser = metaParser_
 
 /**
  * Injects html code into a target html file.
@@ -119,14 +120,14 @@ export async function injectFaviconMarkups(
 
   if (callback) {
     // if there is a callback, handle it the old way.
-    metaparser({
+    metaParser({
       ...metaparserOptions,
       callback
     })
   } else {
     // otherwise botch an async implementation of the metaparser.
     return await new Promise((resolve, reject) => {
-      metaparser({
+      metaParser({
         ...metaparserOptions,
         callback: (err: Error, html: string) => {
           if (err) reject(err)
