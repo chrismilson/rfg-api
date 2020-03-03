@@ -6,6 +6,6 @@ export default {
     dir: 'lib',
     format: 'cjs'
   },
-  plugins: [typescript({ useTsconfigDeclarationDir: true })],
-  external: ['axios', 'fs', 'unzipper']
+  plugins: [typescript()],
+  external: ['axios', 'fs', 'unzipper', 'metaparser']
 }
